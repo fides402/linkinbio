@@ -155,7 +155,25 @@
   <p style="margin-top: 2rem; font-size: 0.9rem; color: white; opacity: 0.8;">akabluesky &copy; 2025</p>
 
   <!-- GoatCounter Analytics -->
-  <script data-goatcounter="https://akabluesky.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://akabluesky.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    document.querySelectorAll('[data-goatcounter-click]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const path = link.getAttribute('data-goatcounter-path');
+        if (!path) return;
+
+        const isNewTab = link.target === '_blank';
+        const href = link.href;
+
+        if (isNewTab) {
+          e.preventDefault();
+          fetch(`https://akabluesky.goatcounter.com/count?p=${encodeURIComponent(path)}`)
+            .finally(() => setTimeout(() => window.open(href, '_blank'), 150));
+        } else {
+          navigator.sendBeacon(`https://akabluesky.goatcounter.com/count?p=${encodeURIComponent(path)}`);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
