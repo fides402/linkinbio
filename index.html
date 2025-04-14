@@ -124,28 +124,28 @@
     <p class="description">Producer and Sample Maker from Italy.</p>
 
     <div class="socials">
-      <a href="https://www.instagram.com/_akabluesky/" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/instagram">
+      <a href="https://www.instagram.com/_akabluesky/" target="_blank" data-track="ig">
         <img src="logo ig.png" alt="Instagram" />
       </a>
-      <a href="https://www.youtube.com/channel/UCWkWb6jDIoPoG72uca8Lbxg/" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/youtube">
+      <a href="https://www.youtube.com/channel/UCWkWb6jDIoPoG72uca8Lbxg/" target="_blank" data-track="yt">
         <img src="yt logo.png" alt="YouTube" />
       </a>
     </div>
 
     <div class="links">
-      <a href="https://akabluesky.beatstars.com/" class="link-card" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/beatstars">
+      <a href="https://akabluesky.beatstars.com/" class="link-card" target="_blank" data-track="beatstars">
         <img src="cover1.jpg" alt="Cover 1" />
         <span>BEATS (Buy 2 Get 1 Free)</span>
       </a>
-      <a href="https://wavwarehouse.com/products/finestra-sul-mare?_pos=3&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/finestra-sul-mare">
+      <a href="https://wavwarehouse.com/products/finestra-sul-mare?_pos=3&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-track="finestra">
         <img src="cover2.jpg" alt="Cover 2" />
         <span>FINESTRA SUL MARE – SAMPLE PACK</span>
       </a>
-      <a href="https://wavwarehouse.com/products/nostalgia-di-un-amore?_pos=1&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/nostalgia-di-un-amore">
+      <a href="https://wavwarehouse.com/products/nostalgia-di-un-amore?_pos=1&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-track="nostalgia">
         <img src="cover3.jpg" alt="Cover 3" />
         <span>NOSTALGIA DI UN AMORE – SAMPLE PACK</span>
       </a>
-      <a href="https://wavwarehouse.com/products/per-questa-sera?_pos=2&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-goatcounter-click data-goatcounter-path="/clicked/per-questa-sera">
+      <a href="https://wavwarehouse.com/products/per-questa-sera?_pos=2&_sid=afb764f0f&_ss=r" class="link-card" target="_blank" data-track="per-questa-sera">
         <img src="cover4.jpg" alt="Cover 4" />
         <span>PER QUESTA SERA – SAMPLE PACK</span>
       </a>
@@ -157,11 +157,10 @@
   <!-- GoatCounter Analytics -->
   <script data-goatcounter="https://akabluesky.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <script>
-    document.querySelectorAll('[data-goatcounter-click]').forEach(link => {
+    document.querySelectorAll('[data-track]').forEach(link => {
       link.addEventListener('click', function (e) {
-        const path = link.getAttribute('data-goatcounter-path');
-        if (!path) return;
-
+        const key = link.getAttribute('data-track');
+        const path = '/clicked/' + key;
         const isNewTab = link.target === '_blank';
         const href = link.href;
 
