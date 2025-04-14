@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link in Bio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      margin: 1rem auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    p.description {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .links a {
+      display: block;
+      margin: 1rem auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 400px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      transition: background 0.3s;
+    }
+
+    .links a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .socials {
+      margin-top: 2rem;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <img src="profile.jpg" alt="Profile" class="profile-pic" />
+  <h1>Nome Utente</h1>
+  <p class="description">Descrizione breve o bio goes here</p>
+
+  <div class="links">
+    <a href="#">🎵 Spotify</a>
+    <a href="#">📺 YouTube</a>
+    <a href="#">📸 Instagram</a>
+    <a href="#">📧 Contattami</a>
+  </div>
+
+  <div class="socials">
+    <a href="#">🐦</a>
+    <a href="#">📸</a>
+    <a href="#">▶️</a>
+  </div>
+</body>
+</html>
